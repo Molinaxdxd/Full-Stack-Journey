@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c3039;
+  font-family: Arial, sans-serif;
+}
+
+#drum-machine{
+  background: #213045;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+#pad-bank{
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 10px;
+}
+
+.drum-pad {
+  height: 90px;
+  background: #465367;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.drum-pad:active {
+  transform: scale(0.95);
+}
+
+.drum-pad.active {
+  background: #60a5fa;
+  box-shadow: 0 0 15px #0b72f1, 0 0 30px #c9daf6;
+  transform: scale(0.95);
+}
+
+#display {
+  color: white;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.1rem; 
+}
