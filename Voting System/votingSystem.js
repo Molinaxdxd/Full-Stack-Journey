@@ -29,7 +29,7 @@ function displayResults() {
   let results = "";
 
   poll.forEach((voters, options) => 
-    results += `${options}: ${voters.size} vote${voters.size === 1 ? "s" : ""}\n`);
+    results += `${options}: ${voters.size} vote${voters.size === 1 ? "" : "s"}\n`);
 
   return `Poll Results:\n${results}`.trimEnd();
 }
