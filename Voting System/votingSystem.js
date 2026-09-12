@@ -29,7 +29,7 @@ function displayResults() {
   let results = "";
 
   poll.forEach((voters, options) => 
-    results += `${options}: ${voters.size} votes\n`);
+    results += `${options}: ${voters.size} vote${voters.size > 1 ? "s" : ""}\n`);
 
   return `Poll Results:\n${results}`.trimEnd();
 }
@@ -42,12 +42,15 @@ addOption("Russia");
 vote("China", "Ame");
 vote("Philippines", "Kuku");
 vote("Russia", "Collapse");
+vote("China", "Fy")
+
+console.log(displayResults());
 
 /*
 sample output
 
 Poll Results:
-China: 1 votes
-Philippines: 1 votes
-Russia: 1 votes
+China: 2 votes
+Philippines: 1 vote
+Russia: 1 vote
 */
